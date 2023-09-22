@@ -42,15 +42,14 @@ const game = {
 };
 
 //1.
+// destructuring players array
 const [players1, players2] = game.players;
 console.log(players1, players2);
 
 //2.
-const [gk, ...filedPlayers] = players1;
-console.log(gk, filedPlayers);
-
-// const [playersTeam2, ...playersTeam2Remain] = players2;
-// console.log(playersTeam2, playersTeam2Remain);
+// implementing rest operators
+const [gk, ...fieldPlayers] = players1;
+console.log(gk, fieldPlayers);
 
 ///3.
 const allPlayers = [...players1, ...players2];
@@ -62,9 +61,9 @@ console.log(players1Final);
 
 //5.
 const {
-  odds: { team1, draw, team2 },
+  odds: { team1, x: draw, team2 },
 } = game;
-console.log(team1, x, team2);
+console.log(team1, draw, team2);
 
 //6.
 const printGoals = function (...players) {
@@ -76,3 +75,27 @@ printGoals(...game.scored);
 // 7.
 team1 < team2 && console.log('Team 1 is more likely to win!');
 team1 > team2 && console.log('Team 2 is more likely to win!');
+
+///////////////////////////////////////
+// coding challenge 3
+// 1.
+for (const [x, y] of game.scored.entries()) {
+  console.log(`Goal ${x + 1}: ${y}`);
+}
+
+// 3.
+console.log(`Odds of victory ${game.team1}: ${game.odds.team1} `);
+console.log(`Odd of draw: ${game.odds.x}`);
+console.log(`Odds of victory ${game.team2}: ${game.odds.team2}`);
+
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds) {
+  average += odd;
+}
+
+average /= odds.length;
+console.log(average);
+
+///////////////////////////////////////////////////////////////////////
+// coding challenge 4
