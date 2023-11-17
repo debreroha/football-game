@@ -96,7 +96,7 @@ for (const odd of odds) {
 
 average /= odds.length;
 console.log(average);
-
+// identifying the winner
 const scorers = {};
 for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
