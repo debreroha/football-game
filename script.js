@@ -102,7 +102,7 @@ for (const player of game.scored) {
   scorers[player] ? scorers[player]++ : (scorers[player] = 1);
 }
 console.log(scorers);
-///////////////////////////////////////////////////////////////////////
+/////////////////////////////////////
 // coding challenge 4
 const gameEvents = new Map([
   [17, '⚽️ GOAL'],
