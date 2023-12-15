@@ -47,7 +47,7 @@ const [players1, players2] = game.players;
 console.log(players1, players2);
 
 //2.
-// implementing rest operators(spreed operators)
+// implementing rest operators
 const [gk, ...fieldPlayers] = players1;
 console.log(gk, fieldPlayers);
 
