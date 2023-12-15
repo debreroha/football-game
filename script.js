@@ -42,7 +42,7 @@ const game = {
 };
 
 //1.
-// destructuring players array using two variables
+// destructuring players
 const [players1, players2] = game.players;
 console.log(players1, players2);
 
